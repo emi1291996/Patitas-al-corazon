@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PATITAS AL CORAZÓN</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="{{ url_for('static', filename='Imagenes/Logo.jpeg') }}" width="30" height="30" class="d-inline-block align-top me-2" alt="Logo">
+        PATITAS AL CORAZÓN
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="{{ url_for('imagenes') }}">Fotitos</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('contacto') }}">Contacto</a></li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Buscar" />
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-4">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+      <!-- Tarjeta Oso -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='Imagenes/perrito_Blanco.jpeg') }}" class="card-img-top img-fluid" alt="Perrito Oso" />
+          <div class="card-body">
+            <h5 class="card-title">Oso</h5>
+            <p class="card-text">Edad: 3 años<br>
+             Historia: Fue rescatado en pleno invierno de un terreno abandonado. Hoy es muy cariñoso y le encanta dormir en sillones.<br>
+             Estado de salud: Excelente, vacunado y desparasitado.
+            </p>
+            <div class="d-grid mt-3">
+              <a href="{{ url_for('formulario') }}" class="btn btn-primary">
+                <i class="bi bi-pencil-square me-1"></i> Llenar formulario
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta Matías -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='Imagenes/perrito_Marron.jpeg') }}" class="card-img-top img-fluid" alt="Perrito Matías">
+          <div class="card-body">
+            <h5 class="card-title">Matías</h5>
+            <p class="card-text">Edad: 5 años<br>
+            Historia: Pasó gran parte de su vida en la calle cuidando a otros perritos más chicos. Es juguetón, obediente y se lleva bien con niños.<br>
+            Estado de salud: En revisión.
+            </p>
+            <div class="d-grid mt-3">
+              <a href="{{ url_for('formulario') }}" class="btn btn-primary">
+                <i class="bi bi-pencil-square me-1"></i> Llenar formulario
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta Monona -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='Imagenes/perritoMarron_Chiquito.jpeg') }}" class="card-img-top img-fluid" alt="Perrita Monona" />
+          <div class="card-body">
+            <h5 class="card-title">Monona</h5>
+            <p class="card-text">Edad: 1 año y medio<br>
+              Historia: Fue encontrada con una patita lastimada, pero ya casi está recuperada. Es súper dulce y juguetona.<br>
+              Estado de salud: En recuperación, controlada por veterinario.
+            </p>
+            <div class="d-grid mt-3">
+              <a href="{{ url_for('formulario') }}" class="btn btn-primary">
+                <i class="bi bi-pencil-square me-1"></i> Llenar formulario
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta Puggi -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='Imagenes/perrito_puggi.jpg') }}" class="card-img-top img-fluid" alt="Perrito Puggi" />
+          <div class="card-body">
+            <h5 class="card-title">Puggi</h5>
+            <p class="card-text">Edad: 4 años<br>
+              Historia: Fue dejado en la puerta del refugio. Se adoptó muy rápido y es súper sociable con personas y otros animales.<br>
+              Estado de salud: Adoptado recientemente.
+            </p>
+            <div class="d-grid mt-3">
+              <a href="{{ url_for('formulario') }}" class="btn btn-primary">
+                <i class="bi bi-pencil-square me-1"></i> Llenar formulario
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta Bruno -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='Imagenes/perrito_Bruno.jpeg') }}" class="card-img-top img-fluid" alt="Perrito Bruno" />
+          <div class="card-body">
+            <h5 class="card-title">Bruno</h5>
+            <p class="card-text">Edad: 2 años<br>
+              Historia: Lo encontraron en mal estado, pero con cuidado y cariño recuperó su peso y energía.<br>
+              Estado de salud: Fuerte y activo, listo para una familia.
+            </p>
+            <div class="d-grid mt-3">
+              <a href="{{ url_for('formulario') }}" class="btn btn-primary">
+                <i class="bi bi-pencil-square me-1"></i> Llenar formulario
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta Laia -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='Imagenes/perrito_Laia.jpg') }}" class="card-img-top img-fluid" alt="Perrita Laia" />
+          <div class="card-body">
+            <h5 class="card-title">Laia</h5>
+            <p class="card-text">Edad: 6 meses<br>
+             Historia: Nació en el refugio junto con sus hermanitos. Es curiosa, muy activa y busca mucho contacto humano.<br>
+            </p>
+          </div>
+            <div class="d-grid mt-3">
+              <a href="{{ url_for('formulario') }}" class="btn btn-primary">
+                <i class="bi bi-pencil-square me-1"></i> Llenar formulario
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Calculadora de compatibilidad con tus perritos -->
+    <div class="container mt-5">
+      <p class="text-center">Respondé estas preguntas y descubrí cuál de nuestros perritos podría ser tu mejor compañero 💕</p>
+      <div id="calculadora" class="card p-4 shadow-lg">
+        <form id="formCompatibilidad">
+          <div class="mb-3">
+            <label class="form-label">🏠 ¿Vivís en casa o departamento?</label>
+            <select class="form-select" id="espacio">
+              <option value="casa">Casa con patio</option>
+              <option value="departamento">Departamento pequeño</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">🕒 ¿Cuánto tiempo libre tenés al día?</label>
+            <select class="form-select" id="tiempo">
+              <option value="mucho">Más de 3 horas</option>
+              <option value="poco">Menos de 3 horas</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">⚡ ¿Qué nivel de energía tenés?</label>
+            <select class="form-select" id="energia">
+              <option value="alta">Alta (me gusta salir y moverme)</option>
+              <option value="media">Media</option>
+              <option value="baja">Baja (prefiero la calma y estar en casa)</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">👶 ¿Hay niños en tu hogar?</label>
+            <select class="form-select" id="ninos">
+              <option value="si">Sí</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+
+          <div class="d-grid mt-4">
+            <button type="submit" class="btn btn-primary"><i class="bi bi-pencil-square me-1"></i> Buscar compañero</button>
+          </div>
+        </form>
+
+        <div id="resultado" class="mt-4 text-center" style="display:none;">
+          <h4 class="mb-3">Tu compañero ideal es...</h4>
+          <img id="fotoRecomendada" src="" alt="Mascota recomendada" class="img-fluid rounded shadow mb-3" style="max-width:250px;">
+          <h5 id="nombreRecomendado"></h5>
+          <p id="descripcionRecomendada" class="mt-2"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  const perritos = [
+    {
+      nombre: "Oso",
+      energia: "baja",
+      espacio: "casa",
+      tiempo: "poco",
+      ninos: "no",
+      descripcion: "Oso es tranquilo y cariñoso, ideal para hogares con espacio y una rutina relajada.",
+      foto: "{{ url_for('static', filename='Imagenes/perrito_Blanco.jpeg') }}"
+    },
+    {
+      nombre: "Matías",
+      energia: "alta",
+      espacio: "casa",
+      tiempo: "mucho",
+      ninos: "si",
+      descripcion: "Matías es juguetón, protector y adora jugar con niños.",
+      foto: "{{ url_for('static', filename='Imagenes/perrito_Marron.jpeg') }}"
+    },
+    {
+      nombre: "Monona",
+      energia: "media",
+      espacio: "departamento",
+      tiempo: "mucho",
+      ninos: "si",
+      descripcion: "Monona es dulce, juguetona y se adapta muy bien a ambientes familiares.",
+      foto: "{{ url_for('static', filename='Imagenes/perritoMarron_Chiquito.jpeg') }}"
+    },
+    {
+      nombre: "Puggi",
+      energia: "media",
+      espacio: "departamento",
+      tiempo: "poco",
+      ninos: "si",
+      descripcion: "Puggi es sociable y de tamaño pequeño, ideal para departamentos y familias con chicos.",
+      foto: "{{ url_for('static', filename='Imagenes/perrito_puggi.jpg') }}"
+    },
+    {
+      nombre: "Bruno",
+      energia: "alta",
+      espacio: "casa",
+      tiempo: "mucho",
+      ninos: "no",
+      descripcion: "Bruno es activo y fuerte, perfecto para personas con energía y espacio.",
+      foto: "{{ url_for('static', filename='Imagenes/perrito_Bruno.jpeg') }}"
+    },
+    {
+      nombre: "Laia",
+      energia: "alta",
+      espacio: "departamento",
+      tiempo: "mucho",
+      ninos: "si",
+      descripcion: "Laia es una cachorra curiosa y llena de energía, ideal para hogares jóvenes y activos.",
+      foto: "{{ url_for('static', filename='Imagenes/perrito_Laia.jpg') }}"
+    }
+  ];
+
+  const form = document.getElementById('formCompatibilidad');
+  const resultado = document.getElementById('resultado');
+  const nombreRecomendado = document.getElementById('nombreRecomendado');
+  const descripcionRecomendada = document.getElementById('descripcionRecomendada');
+  const fotoRecomendada = document.getElementById('fotoRecomendada');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const espacio = document.getElementById('espacio').value;
+    const tiempo = document.getElementById('tiempo').value;
+    const energia = document.getElementById('energia').value;
+    const ninos = document.getElementById('ninos').value;
+
+    // Buscar coincidencia
+    const coincidencia = perritos.find(p =>
+      p.espacio === espacio &&
+      p.tiempo === tiempo &&
+      p.energia === energia &&
+      p.ninos === ninos
+    );
+
+    let elegido;
+    if (coincidencia) {
+      elegido = coincidencia;
+    } else {
+      // Si no hay coincidencia exacta, elegimos el más cercano según energía y espacio
+      elegido = perritos.find(p => p.energia === energia && p.espacio === espacio) || perritos[0];
+    }
+
+    nombreRecomendado.textContent = elegido.nombre;
+    descripcionRecomendada.textContent = elegido.descripcion;
+    fotoRecomendada.src = elegido.foto;
+
+    resultado.style.display = 'block';
+    resultado.scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>

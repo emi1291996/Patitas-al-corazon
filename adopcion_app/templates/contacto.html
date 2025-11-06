@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"> <style>
+  
+body {
+  background-color: #FAF8F2;
+  background-image: url("{{ url_for('static', filename='Imagenes/patitasalcorazon.png') }}");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+</style>
+</head> 
+<body>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <img 
+                src="{{ url_for('static', filename='Imagenes/Logo.jpeg') }}" 
+                width="30" 
+                height="30" 
+                class="d-inline-block align-top me-2">
+                PATITAS AL CORAZÓN
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('index') }}">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('imagenes') }}">Fotitos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('contacto') }}">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+  <br>
+  <div class="container py-4 contact-info"><br>
+        <p>
+            <i class="bi bi-telephone-fill"></i> Teléfono:<br>
+            📱 +54 9 11 3456 7890<br>
+            ☎️ (011) 4321-8765
+        </p>
+        <p>
+            <i class="bi bi-envelope-fill"></i> Correo electrónico:<br>
+            📧 contacto@patitasalcorazon.org.ar
+        </p>
+        <p>
+            <i class="bi bi-geo-alt-fill"></i> Dirección:<br>
+            📍 Calle Amor Animal 1234,<br>
+            Barrio Esperanza, CABA, Argentina
+        </p>
+        <p>
+            <i class="bi bi-clock-fill"></i> Horarios de atención:<br>
+            🕒 Lunes a Viernes: 9:00 a 18:00 hs<br>
+            🐾 Sábados: 10:00 a 14:00 hs<br>
+            🌙 Domingos y feriados: Cerrado
+        </p>
+        <p>
+            <i class="bi bi-share-fill"></i> Redes sociales:<br>
+            🔗 Instagram: @patitasalcorazon<br>
+            🔗 Facebook: Patitas al Corazón Refugio<br>
+            🔗 WhatsApp: +54 9 11 9876 5432
+        </p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>
